@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "collect": "node scripts/collect-prs.js"
+    "collect": "node scripts/collect-prs.js",
+    "generate": "node scripts/generate-release-notes.js",
+    "dev": "npm run collect && npm run generate"
   },
   "dependencies": {
     "dotenv": "^17.3.1",

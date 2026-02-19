@@ -57,14 +57,21 @@ function buildPrompt(data) {
     prompt += `\n`;
   }
   
-  prompt += `Com base no histórico acima, gere uma release note técnica em Markdown com:
-1. Resumo: descrição técnica das mudanças implementadas
-2. Novas Funcionalidades: lista de features com detalhes técnicos
-3. Correções: bugs resolvidos
-4. Melhorias: otimizações e refatorações
-5. Detalhes técnicos: mudanças na arquitetura, dependências ou breaking changes se houver
+  prompt += `Com base no histórico acima, gere uma release note técnica em Markdown CONCISA com:
 
-Tone profissional, técnico, direto. Sem exageros ou expressões informais. Em português.`;
+1. Resumo: 1-2 linhas descrevendo o escopo técnico da release
+2. Novas Funcionalidades: listar apenas (sem explicações longas)
+3. Correções: listar apenas
+4. Melhorias: listar apenas
+5. Breaking Changes: se houver (senão omitir)
+
+Regras importantes:
+- MÁXIMA CONCISÃO: 1 linha por item, sem explicações adicionais
+- NÃO cite commits ou links
+- NÃO cite tecnologias óbvias
+- Apenas mudanças técnicas relevantes
+- Use linguagem técnica direta
+- Em português.`;
   
   return prompt;
 }
