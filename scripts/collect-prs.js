@@ -37,5 +37,6 @@ const payload = {
   }))
 };
 
+fs.mkdirSync("output", { recursive: true });
 fs.writeFileSync("output/input-for-ai.json", JSON.stringify(payload, null, 2));
 console.log("OK");
