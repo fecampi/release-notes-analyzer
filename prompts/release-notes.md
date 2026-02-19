@@ -1,0 +1,1 @@
+Use o JSON para gerar release notes humanas.
